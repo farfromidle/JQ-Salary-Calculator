@@ -8,20 +8,103 @@
     <title>JQuery Salary Calculator</title>
 </head>
 <body>
-    <h1>Salary Calculator</h1>
-    <input type="text" placeholder="First Name" id="firstName">
-    <input type="text" placeholder="Last Name" id="lastName">
-    <input type="number" placeholder="Employee ID" id="idNumber">
-    <input type="text" placeholder="Job Title" id="jobTitle">
-    <input type="number" placeholder="Annual Salary" id="annualSalary">
-    <button id="calculateAnnualSalary">Calculate Annual Salary</button>
+    <header>
+        <h1>JQuery Salary Calculator</h1>
+    </header>
+    <p>Add Employee</p>
+    <!-- <label></label>
+    <label></label>
+    <label></label>
+    <label></label> -->
+<main class="container">
+    <!-- Form for adding the employee information -->
+    <form>
+        <div class="input">
+            <label for="firstName">First Name
+                <input class="js-input-first-name" type="text" placeholder="First Name" id="firstName" name="firstName">
+            </label>
+
+            <label for="lastName"> Last Name
+                <input class="js-input-last-name" type="text" placeholder="Last Name" id="lastName" name="lastName">
+            </label>
+            
+            <label for="idNumber">Employee ID
+                <input class="js-input-id" type="number" placeholder="Employee ID" id="idNumber" name="idNumber">
+            </label>
+            
+            <label for="jobTitle">Job Title
+                <input class="js-input-jb" type="text" placeholder="Job Title" id="jobTitle" name="jobTitle">
+            </label>
+            
+            <label for="annualSalary">Annual Salary
+                <input class="js-input-annual" type="number" placeholder="Annual Salary" id="annualSalary" name="annualSalary">
+            </label>
+
+            <button class="js-click-calc-salary btn" id="calculateAnnualSalary">Calculate Annual Salary</button>
+        </div>
+    </form>
+
+    <table class="jsTable">
+        <thead>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Employee ID</th>
+            <th>Job Title</th>
+            <th>Annual Salary</th>
+            <!-- <th colspan="2">Test</th> -->
+        </thead>
+    
+        <tbody class="tableBody">
+            <tr class="tableBodyRow">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <!-- <td class="alnCenter"><button class="js-btn-delete btn">Delete</button></td> -->
+                <!-- Need to figure out how to set the delete button -->
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="totSal">
+        Salary: <span class="annSal"></span>
+    </div>
+</main>
+    <!-- Will need to add more margin here -->
+
+
+
+
+
+    <!-- Table here -->
+
+
+
 </body>
 </html>
 
 <!-- Table -->
-<table>
-    <thead>
-        <tr</tr>
-    </thead>
-</table>
+
 <!-- Need to figure out setting up the actual visual stuff. Finish the logic first then come back to making it pretty -->
+
+<!-- <table>
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Employee ID</th>
+        <th>Job Title</th>
+        <th>Annual Salary</th>
+        <!-- <th colspan="2">Test</th> -->
+    <!-- </thead>
+
+    <tbody>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+    </tbody>
+</table> -->
