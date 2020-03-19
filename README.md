@@ -8,10 +8,10 @@ The purpose of this project is to build a calculator that shows the annual salar
 
 The following should happen when using the tool.
 
-1. Input data on the form. First Name, Last Name, Employee ID, Job Title & Annual Salary.
-2. Upon click of "Calculate Annual Salary)", the table below should fill up with that information along with the annual salary of each employee.
-3. If you want to delete a line, simply press delete at the end of the table row.
-4. The total salary of all employees is listed at the bottom and should calculate the total amount of all employees' salaries, combined.
+1. Input data on the form. First Name, Last Name, Employee ID, Job Title & Annual Salary. - Done
+2. Upon click of "Calculate Annual Salary)", the table below should fill up with that information along with the annual salary of each employee. - Done
+3. If you want to delete a line, simply press delete at the end of the table row. Done
+4. The total salary of all employees is listed at the bottom and should calculate the total amount of all employees' salaries, combined. - Done
 
 This project utilizes, HTML, CSS, JavaScript & JQuery to accomplish this task.
 
@@ -27,3 +27,7 @@ Questions from Derrick - 3/17/20
 - Follow up, how does event play into the submit variable as well? I feel like they are connected.
 
 - Running into an issue with my code where it keeps telling me “newEmployee” is not defined. As I watch the video and take notes, and work along side it, I’m not sure where the error is coming from. Available to assist?
+
+Additional Comment - 3/19/20
+
+- I was missing a period. Have to learn to not spiral when something like that happens. Any tips for spotting issues when no errors are being given by the console?

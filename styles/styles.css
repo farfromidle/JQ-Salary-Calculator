@@ -1,4 +1,15 @@
-body {
+.bad {
+  background-color: red;
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  background-color: grey;
+}
+/* body {
   background-color: beige;
   margin: 0;
 }
@@ -26,7 +37,7 @@ h6 {
 table {
   width: 100%;
   /* border-collapse: collapse; */
-}
+/* }
 
 th {
   background: white;
@@ -54,4 +65,4 @@ td {
   font-size: 15px;
   border-radius: 4px;
   cursor: pointer;
-}
+} */

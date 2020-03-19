@@ -1,11 +1,15 @@
+$(document).ready(init); //initializing the document
+
 // console.log('JS'); //logs that the JS file is connected properly.
 
 // const collect = []; //array for the calculator. Information should be pushed here.
 
-$(document).ready(init); //initializing the document
+const employees = [];
+let monthlySalary = 0;
 
 function init() {
-  $('js-employee-form').on('submit', addEmployee);
+  $('.js-employee-form').on('submit', addEmployee);
+  $('.js-table-body').on('click', deleteEmployee);
 }
 
 function addEmployee(event) {
@@ -16,10 +20,61 @@ function addEmployee(event) {
     last_name: $('#js-form-lastName').val(),
     id: $('#js-form-employeeID').val(),
     position: $('#js-form-jobTitle').val(),
-    salary: parseFloat($('#js-form-salary')).val()
+    salary: parseFloat($('#js-form-salary').val())
   };
 
-  console.log('Submitted', newEmployee);
+  employees.push(newEmployee);
+
+  $('#js-form-firstName').val(''),
+    $('#js-form-lastName').val(''),
+    $('#js-form-employeeID').val(''),
+    $('#js-form-jobTitle').val(''),
+    $('#js-form-salary').val(''),
+    console.log('Current Employees', newEmployee);
+  calcMonthlySalary();
+  renderEmployees();
+}
+
+function calcMonthlySalary() {
+  let salaryTotal = 0;
+  for (let employee of employees) {
+    salaryTotal += employee.salary;
+  }
+
+  salaryTotal = salaryTotal / 12;
+  salaryTotal = salaryTotal.toFixed(2);
+  monthlySalary = salaryTotal;
+  console.log(salaryTotal);
+}
+
+function deleteEmployee() {
+  $(this)
+    .parent()
+    .parent()
+    .remove();
+}
+
+function renderEmployees() {
+  $('.js-table-body').empty();
+  $('.js-monthly-total').text(`${monthlySalary}`);
+
+  if (monthlySalary > 20000) {
+    $('.js-monthly-total').addClass('bad');
+  } else {
+    $('.js-monthly-total').removeClass('bad');
+  }
+
+  for (let employee of employees) {
+    $('.js-table-body').append(`
+    <tr>
+    <td><button class='js-btn-delete'>Delete</button></td>
+      <td>${employee.first_name}</td>
+      <td>${employee.last_name}</td>
+      <td>${employee.id}</td>
+      <td>${employee.position}</td>
+      <td>${employee.salary}</td>
+    </tr>`);
+  }
 }
 
 //this function is meant to on click submit the annual salary input by the employee
